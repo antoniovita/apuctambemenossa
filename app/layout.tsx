@@ -11,7 +11,7 @@ const cond = Barlow_Condensed({ weight: ["500", "600"], subsets: ["latin"], vari
 const description = "Ato estudantil pacífico na PUC-Rio, terça 13/10 às 11h, no Edifício Frings / Kennedy. Microfone aberto.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://apuctambemenossa.vercel.app"),
   title: { default: "A PUC também é nossa", template: "%s · A PUC também é nossa" },
   description,
   openGraph: {
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     description,
     type: "website",
     locale: "pt_BR",
-    images: [{ url: "/image.png", width: 1080, height: 1080, alt: "A PUC também é nossa. Ato estudantil, terça 13/10 às 11h, Frings / Kennedy." }],
+    images: [{ url: "/og.jpg", width: 800, height: 800, alt: "A PUC também é nossa. Ato estudantil, terça 13/10 às 11h, Frings / Kennedy." }],
   },
-  twitter: { card: "summary", title: "A PUC também é nossa", description, images: ["/image.png"] },
+  twitter: { card: "summary", title: "A PUC também é nossa", description, images: ["/og.jpg"] },
 };
 export const viewport: Viewport = { themeColor: "#0f1a2e", width: "device-width", initialScale: 1 };
 
