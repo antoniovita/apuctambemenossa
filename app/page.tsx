@@ -4,7 +4,7 @@ import ScrollScrub from "@/components/ScrollScrub";
 import Reveal from "@/components/Reveal";
 import PautasShowcase from "@/components/PautasShowcase";
 import CountdownReel from "@/components/CountdownReel";
-import { Cta, Facts, Mic, PAUTAS } from "@/components/content";
+import { Cta, Facts, Mic, PAUTAS, WHATSAPP } from "@/components/content";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
           <p className="lead">Um ato pacífico de alunos que discordam do rumo do país e querem ser ouvidos dentro da própria universidade.</p>
           <Facts />
           <div className="btns">
-            <Link className="btn" href="/ato/">Como participar</Link>
+            <a className="btn" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Entrar no grupo do WhatsApp</a>
             <Link className="btn ghost" href="/pautas/">Nossas pautas</Link>
           </div>
         </div>

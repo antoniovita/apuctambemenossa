@@ -3,6 +3,8 @@ import Reveal from "./Reveal";
 
 export const EVENT = { iso: "2026-10-13T11:00:00-03:00", label: "Terça, 13/10 · 11h", where: "Edifício Frings / Kennedy" };
 
+export const WHATSAPP = "https://chat.whatsapp.com/Jmn6nwQgTYo5azGJYcCXOu?mode=gi_t";
+
 export const PAUTAS = [
   { title: "Segurança pública", text: "O brasileiro vive refém. Tolerância zero com o crime: facção tratada como terrorismo, fim da saidinha e respaldo à polícia e à vítima." },
   { title: "Chega de PT", text: "Do mensalão ao petrolão, o país já viu do que esse projeto é capaz. Não aceitamos aparelhamento do Estado nem a volta das mesmas práticas." },
@@ -65,7 +67,8 @@ export function Cta({ hidePautas = false }: { hidePautas?: boolean }) {
         <div className="cta">
           <p>Dia 13/10, 11h. Apareça e fale.</p>
           <div className="btns">
-            <Link className="btn" href="/ato/">Como vai ser o ato</Link>
+            <a className="btn" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Entrar no grupo do WhatsApp</a>
+            <Link className="btn ghost" href="/ato/">Como vai ser o ato</Link>
             {!hidePautas && <Link className="btn ghost" href="/pautas/">Ver as pautas</Link>}
           </div>
         </div>

@@ -8,9 +8,20 @@ const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--f-anton", 
 const barlow = Barlow({ weight: ["400", "500", "600", "700"], subsets: ["latin"], variable: "--f-barlow", display: "swap" });
 const cond = Barlow_Condensed({ weight: ["500", "600"], subsets: ["latin"], variable: "--f-cond", display: "swap" });
 
+const description = "Ato estudantil pacífico na PUC-Rio, terça 13/10 às 11h, no Edifício Frings / Kennedy. Microfone aberto.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: { default: "A PUC também é nossa", template: "%s · A PUC também é nossa" },
-  description: "Ato estudantil pacífico na PUC-Rio, terça 13/10 às 11h, no Edifício Frings / Kennedy. Microfone aberto.",
+  description,
+  openGraph: {
+    title: "A PUC também é nossa",
+    description,
+    type: "website",
+    locale: "pt_BR",
+    images: [{ url: "/image.png", width: 1080, height: 1080, alt: "A PUC também é nossa. Ato estudantil, terça 13/10 às 11h, Frings / Kennedy." }],
+  },
+  twitter: { card: "summary", title: "A PUC também é nossa", description, images: ["/image.png"] },
 };
 export const viewport: Viewport = { themeColor: "#0f1a2e", width: "device-width", initialScale: 1 };
 
